@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Announcements - AITEA</title>
+    <meta name="description" content="Read AITEA's latest news, press releases, trade statements, and bilateral updates." />
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="/src/styles/main.css">`r`n    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <app-header></app-header>
+
+    <main style="padding-top: 80px;">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="sector-hero-grid">
+            <div class="sector-hero-left">
+              <h1 class="gradient-text sector-title" data-i18n="news.title">News & Announcements</h1>
+            </div>
+            <div class="sector-hero-divider"></div>
+            <div class="sector-hero-right">
+              <p class="sector-subtitle" data-i18n="news.subtitle">Get the latest updates on partnerships, trade, and AITEA initiatives.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Listing -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="grid grid-3">
+            <news-card title-key="news.news_1_title" date-key="news.news_1_date" desc-key="news.news_1_desc" link="#"></news-card>
+            <news-card title-key="news.news_2_title" date-key="news.news_2_date" desc-key="news.news_2_desc" link="#"></news-card>
+            <news-card title-key="news.news_3_title" date-key="news.news_3_date" desc-key="news.news_3_desc" link="#"></news-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <cta-section></cta-section>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>

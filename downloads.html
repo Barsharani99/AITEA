@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Downloads & Document Center - AITEA</title>
+    <meta name="description" content="Download official AITEA documents, membership forms, statutes, and EU-India business guidelines." />
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="/src/styles/main.css">`r`n    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <app-header></app-header>
+
+    <main style="padding-top: 80px;">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="sector-hero-grid">
+            <div class="sector-hero-left">
+              <h1 class="gradient-text sector-title" data-i18n="downloads.title">Document Center & Downloads</h1>
+            </div>
+            <div class="sector-hero-divider"></div>
+            <div class="sector-hero-right">
+              <p class="sector-subtitle" data-i18n="downloads.subtitle">Access our official files, membership applications, and educational brochures.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid of Download Cards -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="grid grid-2">
+            <download-card title-key="downloads.doc_membership_title" desc-key="downloads.doc_membership_desc" file="#"></download-card>
+            <download-card title-key="downloads.doc_statutes_title" desc-key="downloads.doc_statutes_desc" file="/statutes"></download-card>
+            <download-card title-key="downloads.doc_brochure_title" desc-key="downloads.doc_brochure_desc" file="#"></download-card>
+            <download-card title-key="downloads.doc_report_title" desc-key="downloads.doc_report_desc" file="#"></download-card>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <cta-section></cta-section>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>

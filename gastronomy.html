@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastronomy Sector - AITEA</title>
+    <meta name="description" content="Explore AITEA's gastronomy sector programs, chef exchange residences, and culinary education initiatives." />
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="/src/styles/main.css">`r`n    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <app-header></app-header>
+
+    <main style="padding-top: 80px;">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="sector-hero-grid">
+            <div class="sector-hero-left">
+              <h1 class="gradient-text sector-title" data-i18n="gastronomy.title">Gastronomy Sector</h1>
+            </div>
+            <div class="sector-hero-divider"></div>
+            <div class="sector-hero-right">
+              <p class="sector-subtitle" data-i18n="gastronomy.subtitle">Celebrating culinary diversity and training.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="grid grid-2" style="gap: var(--space-12); align-items: flex-start;">
+            <div>
+              <h2 data-i18n="sectors_trans.overview_title">Overview</h2>
+              <div style="margin-bottom: var(--space-4); border-radius: var(--radius-lg); overflow: hidden; height: 220px; box-shadow: var(--shadow-md);">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=70&fm=webp" alt="AITEA culinary exchange program showcasing chef training and gourmet food preparation" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+              </div>
+              <p style="font-size: var(--fs-md);" data-i18n="gastronomy.overview">
+                Connecting the rich culinary traditions of Austria (Viennese cafe culture, pastries) and India (diverse spices, regional cuisines) through culinary exchanges and professional education.
+              </p>
+              
+              <div class="card glass" style="margin-top: var(--space-6);">
+                <h3 data-i18n="sectors_trans.partnerships_title">Strategic Partnerships</h3>
+                <p style="margin-bottom: 0;" data-i18n="gastronomy.partnerships">
+                  Supported by culinary institutes, organic farming unions, and hotel associations.
+                </p>
+              </div>
+            </div>
+
+            <div class="card" style="border-top: 4px solid var(--color-accent);">
+              <h3 data-i18n="sectors_trans.objectives_title" style="margin-bottom: var(--space-4);">Objectives</h3>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-3); padding: 0; margin-bottom: var(--space-6);">
+                <li style="display: flex; gap: var(--space-2); font-size: var(--fs-sm);">
+                  <span style="color: var(--color-accent-dark);">🔸</span>
+                  <span data-i18n="gastronomy.obj_1">Enable professional chef exchange residencies.</span>
+                </li>
+                <li style="display: flex; gap: var(--space-2); font-size: var(--fs-sm);">
+                  <span style="color: var(--color-accent-dark);">🔸</span>
+                  <span data-i18n="gastronomy.obj_2">Establish culinary scholarship guidelines.</span>
+                </li>
+                <li style="display: flex; gap: var(--space-2); font-size: var(--fs-sm);">
+                  <span style="color: var(--color-accent-dark);">🔸</span>
+                  <span data-i18n="gastronomy.obj_3">Promote sustainable food production and heritage cuisines.</span>
+                </li>
+              </ul>
+
+              <h3 data-i18n="sectors_trans.programs_title" style="margin-bottom: var(--space-4);">Key Programs</h3>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-2); padding: 0;">
+                <li style="font-size: var(--fs-sm); font-weight: 600; color: var(--color-primary);" data-i18n="gastronomy.prog_1">Indo-Austrian Culinary Showcase</li>
+                <li style="font-size: var(--fs-sm); font-weight: 600; color: var(--color-primary);" data-i18n="gastronomy.prog_2">Cafe Culture Integration Workshops</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <cta-section></cta-section>
+    </main>
+
+    <app-footer></app-footer>
+  </body>
+</html>

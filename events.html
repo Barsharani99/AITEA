@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events & Activities - AITEA</title>
+    <meta name="description" content="Explore AITEA's upcoming trade conferences, roundtable forums, and past cultural exchanges." />
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="/src/styles/main.css">`r`n    <script type="module" src="/src/main.js"></script>
+    <style>
+      .tab-btns-container {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-4);
+        margin-bottom: var(--space-8);
+      }
+      .tab-btn {
+        padding: 0.6rem 1.5rem;
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-white);
+        border-radius: var(--radius-full);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-fast);
+      }
+      .tab-btn.active {
+        background-color: var(--color-primary);
+        color: white;
+        border-color: var(--color-primary);
+      }
+      .event-tab-content {
+        display: none;
+      }
+      .event-tab-content.active {
+        display: block;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--space-6);
+        margin-top: var(--space-8);
+      }
+      .gallery-card {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-white);
+        box-shadow: var(--shadow-sm);
+        transition: all var(--transition-normal);
+      }
+      .gallery-card:hover {
+        transform: scale(1.03);
+        box-shadow: var(--shadow-md);
+      }
+      .gallery-svg {
+        width: 100%;
+        height: 180px;
+        display: block;
+        background: var(--color-primary-light);
+      }
+      .gallery-info {
+        padding: var(--space-4);
+      }
+      .gallery-title {
+        font-size: var(--fs-sm);
+        font-weight: 700;
+        margin-bottom: var(--space-1);
+        color: var(--color-primary);
+      }
+      .gallery-meta {
+        font-size: var(--fs-xs);
+        color: var(--color-text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <app-header></app-header>
+
+    <main style="padding-top: 80px;">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="sector-hero-grid">
+            <div class="sector-hero-left">
+              <h1 class="gradient-text sector-title" data-i18n="events.title">AITEA Events & Activities</h1>
+            </div>
+            <div class="sector-hero-divider"></div>
+            <div class="sector-hero-right">
+              <p class="sector-subtitle" data-i18n="events.subtitle">Explore our upcoming initiatives and review our past activities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events Tabs & List -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="tab-btns-container">
+            <button class="tab-btn active" onclick="switchTab('upcoming')" data-i18n="events.upcoming_tab">Upcoming Events</button>
+            <button class="tab-btn" onclick="switchTab('past')" data-i18n="events.past_tab">Past Events</button>
+          </div>
+
+          <!-- Upcoming Events Tab Content -->
+          <div class="event-tab-content active" id="upcoming-events-tab">
+            <div class="grid grid-2">
+              <event-card title-key="events.event_1_title" date-key="events.event_1_date" location-key="events.event_1_loc" desc-key="events.event_1_desc" link="#" reg-link="/event-registration?event=events.event_1_title"></event-card>
+              <event-card title-key="events.event_2_title" date-key="events.event_2_date" location-key="events.event_2_loc" desc-key="events.event_2_desc" link="#" reg-link="/event-registration?event=events.event_2_title"></event-card>
+            </div>
+          </div>
+
+          <!-- Past Events Tab Content -->
+          <div class="event-tab-content" id="past-events-tab">
+            <div class="grid grid-2">
+              <div class="card" style="opacity: 0.85;">
+                <div class="event-meta" style="display: flex; justify-content: space-between; font-size: var(--fs-xs); color: var(--color-text-muted); margin-bottom: var(--space-2);">
+                  <span>📅 <span data-i18n="events.event_past_date">December 12, 2025</span></span>
+                  <span>📍 <span data-i18n="events.event_past_loc">Salzburg, Austria</span></span>
+                </div>
+                <h3 data-i18n="events.event_past_title">AITEA Cultural Gala 2025</h3>
+                <p data-i18n="events.event_past_desc">An evening celebrating the fusion of Indian classical dance and Austrian orchestral music, attended by dignitaries from both nations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event Gallery Section -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="events.gallery_title">Event Gallery</h2>
+          </div>
+          <div class="gallery-grid">
+            <!-- Item 1 -->
+            <div class="gallery-card">
+              <svg class="gallery-svg" viewBox="0 0 100 60">
+                <rect width="100%" height="100%" fill="#1e293b"/>
+                <path d="M20 45 L50 20 L80 45 Z" fill="#3b82f6" opacity="0.6"/>
+                <path d="M40 45 L65 30 L90 45 Z" fill="#0284c7" opacity="0.8"/>
+                <circle cx="50" cy="15" r="5" fill="#f59e0b"/>
+              </svg>
+              <div class="gallery-info">
+                <div class="gallery-title" data-i18n="events.event_1_title">Green Tech Summit</div>
+                <div class="gallery-meta" data-i18n="events.event_1_date">Vienna, 2026</div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gallery-card">
+              <svg class="gallery-svg" viewBox="0 0 100 60">
+                <rect width="100%" height="100%" fill="#0f172a"/>
+                <circle cx="50" cy="30" r="15" fill="none" stroke="#22c55e" stroke-width="2"/>
+                <circle cx="35" cy="30" r="8" fill="none" stroke="#f59e0b" stroke-width="2"/>
+                <circle cx="65" cy="30" r="8" fill="none" stroke="#ef4444" stroke-width="2"/>
+              </svg>
+              <div class="gallery-info">
+                <div class="gallery-title" data-i18n="events.event_past_title">Cultural Gala 2025</div>
+                <div class="gallery-meta" data-i18n="events.event_past_date">Salzburg, 2025</div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-card">
+              <svg class="gallery-svg" viewBox="0 0 100 60">
+                <rect width="100%" height="100%" fill="#111827"/>
+                <path d="M10 50 H90 V48 H10 Z" fill="#ffffff"/>
+                <rect x="25" y="20" width="10" height="28" fill="#3b82f6"/>
+                <rect x="45" y="15" width="10" height="33" fill="#f59e0b"/>
+                <rect x="65" y="25" width="10" height="23" fill="#22c55e"/>
+              </svg>
+              <div class="gallery-info">
+                <div class="gallery-title" data-i18n="events.event_2_title">Vocational Roundtable</div>
+                <div class="gallery-meta" data-i18n="events.event_2_date">New Delhi, 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <cta-section></cta-section>
+    </main>
+
+    <app-footer></app-footer>
+
+    <!-- Tab switcher JS -->
+    <script>
+      function switchTab(tab) {
+        // Toggle buttons
+        const btns = document.querySelectorAll('.tab-btn');
+        btns.forEach(btn => btn.classList.remove('active'));
+        
+        // Toggle contents
+        const contents = document.querySelectorAll('.event-tab-content');
+        contents.forEach(content => content.classList.remove('active'));
+
+        if (tab === 'upcoming') {
+          document.querySelector('button[onclick="switchTab(\'upcoming\')"]').classList.add('active');
+          document.getElementById('upcoming-events-tab').classList.add('active');
+        } else {
+          document.querySelector('button[onclick="switchTab(\'past\')"]').classList.add('active');
+          document.getElementById('past-events-tab').classList.add('active');
+        }
+      }
+    </script>
+  </body>
+</html>

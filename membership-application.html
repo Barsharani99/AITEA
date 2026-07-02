@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AITEA Membership Application</title>
+    <meta name="description" content="Apply for AITEA membership through a guided application form for individuals, corporates, and institutions." />
+    <script type="module" src="./src/main.js"></script>
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./membership-application.css">
+  </head>
+  <body>
+    <app-header></app-header>
+
+    <main class="portal-shell" style="padding-top: 118px;">
+      <section class="membership-card" aria-labelledby="portal-title">
+        <header class="portal-header">
+          <div>
+            <p class="eyebrow">Austria India Trade &amp; Education Association</p>
+            <h1 id="portal-title">AITEA Membership Application</h1>
+          </div>
+          <div class="brand-seal" aria-label="AITEA">AI</div>
+        </header>
+
+        <nav class="progress-nav" aria-label="Application progress">
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <ol id="step-list"></ol>
+        </nav>
+
+        <form id="membership-form" novalidate>
+          <!-- Step 1: Contact & Identity -->
+          <div class="step-panel active" data-step="0">
+            <div class="step-copy">
+              <span>Step 1 of 3</span>
+              <h2>Contact &amp; Identity</h2>
+              <p id="credentials-step-description">Share your contact and identity details to set up your membership.</p>
+            </div>
+            
+            <div class="form-grid" id="credentials-fields">
+              <!-- Dynamic fields injected here based on category -->
+            </div>
+          </div>
+
+          <!-- Step 2: Goals & Interests -->
+          <div class="step-panel" data-step="1">
+            <div class="step-copy">
+              <span>Step 2 of 3</span>
+              <h2>Strategic Profile &amp; Bilateral Interests</h2>
+              <p id="interests-step-description">Tell us about your strategic focus and bilateral alignment.</p>
+            </div>
+            
+            <div class="form-grid" id="interest-fields">
+              <!-- Dynamic fields injected here based on category -->
+            </div>
+          </div>
+
+          <!-- Step 3: Motivation & Consent -->
+          <div class="step-panel" data-step="2">
+            <div class="step-copy">
+              <span>Step 3 of 3</span>
+              <h2>Submission &amp; Consent</h2>
+              <p>Provide your statement of interest, supporting documents, and consent to finalize your application.</p>
+            </div>
+            
+            <div class="form-grid">
+              <label class="floating-field full">
+                <textarea id="statement" name="statement" rows="5" maxlength="2400" placeholder=" "></textarea>
+                <span>Statement of Interest (max 300 words)</span>
+                <small class="word-count" id="word-count">0 / 300 words</small>
+                <strong class="field-error"></strong>
+              </label>
+
+              <div class="upload-zone full" id="upload-zone">
+                <input type="file" id="document" name="document" accept="application/pdf,.pdf">
+                <div class="upload-icon">PDF</div>
+                <h3 id="upload-title">Drag and drop your PDF here</h3>
+                <p id="upload-help">Maximum 5MB.</p>
+                <span id="document-label">Supporting document</span>
+                <strong class="field-error" id="document-error"></strong>
+              </div>
+
+              <div class="consent-rows full">
+                <label class="check-row">
+                  <input type="checkbox" id="gdpr" name="gdpr">
+                  <span>I consent to AITEA processing my application data under GDPR-aligned privacy standards.</span>
+                </label>
+                <p class="field-error" id="gdpr-error" style="margin-bottom: 12px;"></p>
+
+                <label class="check-row" style="margin-top: 12px;">
+                  <input type="checkbox" id="conduct" name="conduct">
+                  <span>I agree to follow the AITEA Statutes and Code of Conduct.</span>
+                </label>
+                <p class="field-error" id="conduct-error"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="ghost-button" id="back-button">Back</button>
+            <button type="button" class="gold-button" id="next-button">Continue</button>
+            <button type="submit" class="gold-button submit-button" id="submit-button">
+              <span class="button-text">Submit Application</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </form>
+
+        <section class="success-state" id="success-state" aria-live="polite">
+          <div class="success-ring">
+            <svg viewBox="0 0 52 52" aria-hidden="true">
+              <circle cx="26" cy="26" r="24"></circle>
+              <path d="M15 27.5 22.5 35 38 18"></path>
+            </svg>
+          </div>
+          <h2>Application Received</h2>
+          <p>Thank you for applying to AITEA. Our membership team will review your submission and contact you soon.</p>
+        </section>
+      </section>
+    </main>
+
+    <app-footer></app-footer>
+    <script type="module" src="./membership-application.js"></script>
+  </body>
+</html>
